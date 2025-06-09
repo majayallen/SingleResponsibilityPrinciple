@@ -1,6 +1,6 @@
 # Single Responsibility Principle
 
-## <a href="https://www.linkedin.com/in/soheilsadeghii/"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Symbols/Exclamation%20Question%20Mark.webp" alt="Exclamation Question Mark" width="35" height="35" /></a> What is SRP?
+<!-- ## <a href="https://www.linkedin.com/in/soheilsadeghii/"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Symbols/Exclamation%20Question%20Mark.webp" alt="Exclamation Question Mark" width="35" height="35" /></a> What is SRP? -->
 
 **SRP (Single Responsibility Principle)** is the first principle of SOLID.  
 It states that:  
