@@ -1,128 +1,61 @@
-# Single Responsibility Principle (SRP) in C#
+# Single Responsibility Principle
 
-This project demonstrates the **Single Responsibility Principle (SRP)** — the **"S"** in the **SOLID** principles — using a basic example in C#.
+## <a href="https://www.linkedin.com/in/soheilsadeghii/"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Symbols/Exclamation%20Question%20Mark.webp" alt="Exclamation Question Mark" width="35" height="35" /></a> What is SRP?
 
-## 💡 What is the Single Responsibility Principle?
+**SRP (Single Responsibility Principle)** is the first principle of SOLID.  
+It states that:  
+> *A class should have one and only one reason to change.*
 
-> **SRP** states that _a class should have only one reason to change_.
+In other words, every class should handle only **one responsibility** or **one specific functionality** of the application.  
+This makes your code **easier to understand, maintain, and extend**.
 
-In other words, each class should focus on **one specific task or responsibility**. If a class takes on multiple roles, it's more likely to become fragile, harder to maintain, and harder to test.
+---
 
-## 🛠 Project Structure
+## <a href="https://www.linkedin.com/in/soheilsadeghii/"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Symbols/Check%20Mark%20Button.webp" alt="Check Mark Button" width="35" height="35" /></a> How This Project Applies SRP
 
-This project is structured to follow SRP by clearly separating responsibilities across different classes:
+In this example, the system deals with two separate responsibilities:
 
-```
+1. **Managing customer data**
+2. **Logging errors to a file**
 
+To respect SRP, these concerns are separated into **two different classes**:
+
+- `CustomerRepository`  
+  Responsible only for **adding customers** to the database.
+
+- `FileLogger`  
+  Responsible only for **logging errors** to a file.
+
+This separation means that if we need to change the logging logic (e.g., switch to a database logger), we won’t need to touch the customer logic — and vice versa.  
+This is exactly what SRP aims to achieve!
+
+---
+
+## <a href="https://www.linkedin.com/in/soheilsadeghii/"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Travel%20and%20Places/Rocket.webp" alt="Rocket" width="25" height="25" /></a> Summary
+
+| Class            | Responsibility                       |
+|------------------|----------------------------------------|
+| `Customer`        | Holds customer data (model)            |
+| `CustomerRepository` | Adds customer to storage (logic layer) |
+| `FileLogger`      | Logs error messages to file (utility)  |
+
+Each class has a **clear and focused purpose**, following SRP best practices.
+
+---
+
+## <a href="https://www.linkedin.com/in/soheilsadeghii/"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Objects/File%20Folder.webp" alt="File Folder" width="35" height="35" /></a> Project Structure
+
+```text
 SingleResponsibilityPrinciple/
 │
-├── Customer.cs              // Holds customer data
-├── CustomerRepository.cs    // Handles customer data persistence
-└── FileLogger.cs            // Handles logging errors to a file
-
-````
-
----
-
-## 📄 Code Overview
-
-### ✅ `Customer` Class
-
-Responsible **only** for storing customer data.
-
-```csharp
-public class Customer
-{
-    public int Id { get; set; }
-    public string Name { get; set; }
-    public string Family { get; set; }
-}
-````
-
----
-
-### ✅ `CustomerRepository` Class
-
-Responsible **only** for database operations (simulated here). It does **not** handle logging by itself.
-
-```csharp
-public class CustomerRepository
-{
-    public void Add(Customer customer)
-    {
-        try
-        {
-            // Add customer to Database 
-        }
-        catch (Exception e)
-        {
-            FileLogger.Log(e.ToString());
-        }
-    }
-}
+├── Program.cs              // Entry point
+├── Customer.cs             // Data model
+├── CustomerRepository.cs   // Customer logic
+└── FileLogger.cs           // Logging utility
 ```
-
+## <a href="https://www.linkedin.com/in/soheilsadeghii/"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/People/Eyes.webp" alt="Eyes" width="35" height="35" /></a> Views
+![Visitor Badge](https://visitor-badge.laobi.icu/badge?page_id=SoheilSadeghii.SingleResponsibilityPrinciple)
 ---
-
-### ✅ `FileLogger` Class
-
-Dedicated **only** to logging errors to a file. This keeps the logging logic separated from the business logic.
-
-```csharp
-public class FileLogger
-{
-    public static void Log(string content)
-    {
-        System.IO.File.WriteAllText("D:\\errors.txt", content);
-    }
-}
-```
-
-> **Note:** There was a small bug in the original logger — `content()` should be `content`. The corrected version is shown above.
-
----
-
-## ✅ How This Demonstrates SRP
-
-Each class has **exactly one responsibility**:
-
-* `Customer` → holds data
-* `CustomerRepository` → manages data storage
-* `FileLogger` → logs errors
-
-This separation ensures that:
-
-* If logging logic changes, only `FileLogger` needs updating.
-* If database logic changes, only `CustomerRepository` is affected.
-* Each class has a **single reason to change**.
-
----
-
-## 🚀 Future Enhancements
-
-* Simulate actual database operations
-* Add unit tests to verify SRP enforcement
-* Use dependency injection for better decoupling
-
----
-
-## 👁️ GitHub Page Views
-
-![Visitor Badge](https://visitor-badge.laobi.icu/badge?page_id=YourGitHubUsername.SRPProjectName)
-
-> Replace `YourGitHubUsername.SRPProjectName` with your actual GitHub repo path.
-
----
-
-## 📚 Related SOLID Principles
-
-Coming soon as separate projects:
-
-* \[O] Open/Closed Principle
-* \[L] Liskov Substitution Principle
-* \[I] Interface Segregation Principle
-* \[D] Dependency Inversion Principle
-
----
-
-Thanks for reading! ⭐ Star the repo if you found it helpful.
+Thanks for checking out this project!  
+If you found it helpful, feel free to <a href="https://www.linkedin.com/in/soheilsadeghii/"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Animals%20and%20Nature/Star.webp" alt="Star" width="15" height="15" /></a> the repo or share it with others.  
+Contributions, feedback, and suggestions are always welcome!
