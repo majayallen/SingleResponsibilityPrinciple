@@ -11,7 +11,7 @@ This makes your code **easier to understand, maintain, and extend**.
 
 ---
 
-## <a href="https://www.linkedin.com/in/soheilsadeghii/"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Symbols/Check%20Mark%20Button.webp" alt="Check Mark Button" width="35" height="35" /></a> How This Project Applies SRP
+## <a href="https://www.linkedin.com/in/soheilsadeghii/"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Symbols/Exclamation%20Question%20Mark.webp" alt="Exclamation Question Mark" width="35" height="35" /></a> How This Project Applies SRP
 
 In this example, the system deals with two separate responsibilities:
 
@@ -31,7 +31,7 @@ This is exactly what SRP aims to achieve!
 
 ---
 
-## <a href="https://www.linkedin.com/in/soheilsadeghii/"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Travel%20and%20Places/Rocket.webp" alt="Rocket" width="25" height="25" /></a> Summary
+## <a href="https://www.linkedin.com/in/soheilsadeghii/"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Travel%20and%20Places/Rocket.webp" alt="Rocket" width="35" height="35" /></a> Summary
 
 | Class            | Responsibility                       |
 |------------------|----------------------------------------|
